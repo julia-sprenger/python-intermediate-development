@@ -106,6 +106,9 @@
     <loc>https://julia-sprenger.github.io/python-intermediate-development/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/aio.html</loc>
+  </url>
+  <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/common-issues.html</loc>
   </url>
   <url>
@@ -113,6 +116,9 @@
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/functional-programming.html</loc>
+  </url>
+  <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/images.html</loc>
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/index.html</loc>
@@ -226,6 +232,9 @@
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/common-issues.html</loc>
   </url>
   <url>
@@ -235,10 +244,19 @@
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/functional-programming.html</loc>
   </url>
   <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/index.html</loc>
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/installation-instructions.html</loc>
+  </url>
+  <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/object-oriented-programming.html</loc>
@@ -281,6 +299,12 @@
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor/software-architecture-extra.html</loc>
+  </url>
+  <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://julia-sprenger.github.io/python-intermediate-development/key-points.html</loc>
   </url>
   <url>
     <loc>https://julia-sprenger.github.io/python-intermediate-development/object-oriented-programming.html</loc>
