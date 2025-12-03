@@ -5,15 +5,16 @@ site: sandpaper::sandpaper_site
 
 This course aims to teach a **core set** of established,
 intermediate-level software development skills
-and best practices for working as part of a team in a research environment
+and best practices for working as part of a team in a data analysis environment
 using Python as an example programming language
 (see detailed [learning objectives](index.md#learning-objectives-for-the-workshop) below).
-The core set of skills we teach is not a comprehensive set of all-encompassing skills,
-but a selective set of tried-and-tested collaborative development skills
+The core set of skills we teach is not a comprehensive set of all-encompassing skills, but a selective set of tried-and-tested collaborative development skills
 that forms a firm foundation for continuing on your learning journey.
 
+This lesson is tailored for employees of the Organisation for Economic Co-operation and Development (OECD), following organizational good practice guidelines and recommendations.
+
 A **typical learner** for this course may be someone who
-is working in a research environment,
+is working in a data oriented division,
 needing to write some code,
 has **gained basic software development skills**
 either by self-learning or attending,
@@ -36,8 +37,7 @@ to help them design more robust software code that goes
 beyond a few thrown-together proof-of-concept scripts,
 taking into consideration the lifecycle of software,
 writing software for stakeholders,
-team ethic
-and applying a process to understanding, designing, building, releasing, and maintaining software.
+team ethic and applying a process to understanding, designing, building, releasing, and maintaining software.
 
 ## Target Audience
 

@@ -7,7 +7,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Set up a Python virtual environment for our software project using `venv` and `pip`.
+- Set up a Python virtual environment for our software project using `uv` and `pip`.
 - Run our software from the command line.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -21,29 +21,25 @@ exercises: 0
 
 ## Introduction
 
-So far we have cloned our software project from GitHub and inspected its contents and architecture a bit.
-We now want to run our code to see what it does -
-let us do that from the command line.
-For the most part of the course we will run our code
-and interact with Git from the command line.
-While we will develop and debug our code using an IDE
-and it is possible to use Git from the IDE too,
-typing commands in the command line allows you to familiarise yourself and learn it well.
-A bonus is that this knowledge is transferable to running code in other programming languages
-and is independent from any IDE you may use in the future.
+So far we have setup or local and remote project space on our machine and the Algobank and linked them. Now we want to make sure that 1) only files relevant for sharing are included in the repository (i.e. no temporary files, no links) and 2) dependencies we are using are tracked consistenly across the project.
 
-If you have a little peek into our code
-(e.g. run `cat inflammation/views.py` from the project root),
-you will see the following two lines somewhere at the top.
 
-```python
-from matplotlib import pyplot as plt
-import numpy as np
+## Ignoring files
+The `link` folder will be populated automatically depending what tools the 
+project has requested, those files we don't want to track in our git repository, as these are not part of the project itself. Similarly, when executing Python code, `.pyc` files are automatically generated for each python module. Those temporary files we also don't want to include in the git repository.
+
+To ensure these files are never added to the repository we use a `.gitignore` file with the following content:
+
+```bash
+link
+*.pyc
 ```
 
-This means that our code requires two **external libraries**
-(also called third-party packages or dependencies) -
-`numpy` and `matplotlib`.
+A number of template for `.gitignore` files depending on the project language exist, see [github/gitignore](https://github.com/github/gitignore).
+
+
+## Virtual Environments
+
 Python applications often use external libraries that don't come as part of the standard Python distribution.
 This means that you will have to use a *package manager* tool to install them on your system.
 Applications will also sometimes need a
@@ -59,6 +55,8 @@ The solution for this problem is to create a self-contained
 which contains a particular version of Python installation
 plus a number of additional external libraries.
 
+For OECD projects follow the Knowledge Base on [Create a Python virtual environment in VSCode](https://oecd.service-now.com/dhelp?id=kb_article_view&sys_kb_id=17648e8c33e13a10fa766ce9bd5c7b65)
+
 Virtual environments are not just a feature of Python -
 most modern programming languages use a similar mechanism to isolate libraries or dependencies
 for a specific project, making it easier to develop, run, test and share code with others.
@@ -67,8 +65,6 @@ This can also be achieved with more generic package managers like Spack,
 which is used extensively in HPC settings to resolve complex dependencies.
 In this episode, we learn how to set up a virtual environment to develop our code
 and manage our external dependencies.
-
-## Virtual Environments
 
 So what exactly are virtual environments, and why use them?
 
@@ -127,7 +123,7 @@ from different virtual environments.
 
 ### Managing Python Virtual Environments
 
-There are several commonly used command line tools for managing Python virtual environments:
+`uv` is the OECD recommended tool for management of environments and dependencies. However, other tools exist also:
 
 - `venv`, available by default from the standard `Python` distribution from `Python 3.3+`
 - `virtualenv`, needs to be installed separately but supports both `Python 2.7+` and `Python 3.3+`versions
@@ -156,19 +152,11 @@ it interacts and obtains the packages from the central repository called
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## A Note on Anaconda and `conda`
+If you package installation fails due to `SSL CERTIFICATE_VERIFY_FAILED` errors, you can either add the missing trusted certificate to your system or configure the package manager to trust the default sources. For `pip`  this can be done via
 
-Anaconda is an open source Python distribution commonly used for scientific programming -
-it conveniently installs Python, package and environment management `conda`,
-and a  number of commonly used scientific computing packages
-so you do not have to obtain them separately.
-`conda` is an independent command line tool
-(available separately from the Anaconda distribution too) with dual functionality:
-(1) it is a package manager that helps you find Python packages
-from remote package repositories and install them on your system, and
-(2) it is also a virtual environment manager.
-So, you can use `conda` for both tasks instead of using `venv` and `pip`.
-
+```bash
+pip config set global.trusted-host "files.pythonhosted.org pypi.org"
+```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -217,6 +205,7 @@ need to create an alias for the python executable `python.exe`, as explained in 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ### Creating Virtual Environments Using `venv`
 
