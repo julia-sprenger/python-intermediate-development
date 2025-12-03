@@ -26,39 +26,18 @@ So, you have gained basic software development skills either by self-learning or
 e.g., a [novice Software Carpentry course][swc-lessons].
 You have been applying those skills for a while by writing code to help with your work
 and you feel comfortable developing code and troubleshooting problems.
-However, your software has now reached a point where there is too much code to be kept in one script.
-Perhaps it is involving more researchers (developers) and users,
-and more collaborative development effort is needed to add new functionality
-while ensuring previous development efforts remain functional and maintainable.
+However, you are working on a shared project with some colleagues and need 
+to organize the development across contributors and machines.
 
-This course provides the next step in software development -
-it teaches some **intermediate software engineering skills and best practices**
-to help you restructure existing code and design more robust,
-reusable and maintainable code,
-automate the process of testing and verifying software correctness
-and support collaborations with others in a way that
-mimics a typical software development process within a team.
+This course provides the next steps in how to setup and work collaboratively 
+on a data project at the OECD.
 
-The course uses a number of different **software development tools and techniques**
-interchangeably as you would in a real life.
-We had to make some choices about topics and tools to teach here,
-based on established best practices,
-ease of tool installation for the audience,
-length of the course and other considerations.
-Tools used here are not mandated though:
-alternatives exist and we point some of them out along the way.
-Over time, you will develop a preference for certain tools and programming languages
-based on your personal taste
-or based on what is commonly used by your group, collaborators or community.
-However, the topics covered should give you a solid foundation for working on software development
-in a team and producing high quality software that is easier to develop
-and sustain in the future by yourself and others.
-Skills and tools taught here, while Python-specific,
-are transferable to other similar tools and programming languages.
+This course requires basic knowledge in Python, Git, Shell and the access to the OECD Algobank. For introductions on those topics, see the OECD-customized [Python](https://julia-sprenger.github.io/python-novice-gapminder/), [Unix Shell](https://julia-sprenger.github.io/shell-novice/) and [Git](https://julia-sprenger.github.io/git-novice/) courses.
 
-The course is organised into the following sections:
 
-![Course overview diagram](fig/course-overview.svg){alt="Course overview diagram. Arrows connect the following boxed text in order: 1) Setting up software environment 2) Verifying software correctness 3) Software development as a process 4) Collaborative development for reuse 5) Managing software over its lifetime."}
+<!-- The course is organised into the following sections:
+
+![Course overview diagram](fig/course-overview.svg){alt="Course overview diagram. Arrows connect the following boxed text in order: 1) Setting up software environment 2) Verifying software correctness 3) Software development as a process 4) Collaborative development for reuse 5) Managing software over its lifetime."} -->
 
 <!---
 Source of the above image can be rendered in the Mermaid live editor:
@@ -75,6 +54,33 @@ flowchart LR
 ```
 -->
 
+### [Section 0: Setting up the Data Project]
+
+- Create a new project folder `myproject` in the `V:` drive.
+- Open the `V:\myproject` folder in VSCode.
+- Check that Python as well as git are available locally by executing `python` and `git` in the terminal. If this raises an error as those are not installed go to the workshop setup instructions for more details on how to install them.
+- Initialize the git repository `git init`
+- Login to the Algobank and create a corresponding new empty project.
+- Setup the link between the local and remote (Algobank) project `git remote add https://gitlab.algobank.oecd.org/<GROUP>/<PROJECT_NAME>`.
+
+
+We will start with template structure of an OECD Data project containing the following empty folders:
+
+- `sources` for storing the source data files
+- `sandbox` for temporary files
+- `results` for analysis results
+- `documentation` for supplementory documentation files
+- `dissemination` for results to be uploaded in the Dot Stat Suite and to be displayed in the OECD Data Explorer
+- `archive` for outdated / cold files
+- `links` is populated with tools requested for the project, see the full list of tools which can be requested in the `P:` drive
+
+
+In the project folder create those empty folders accordingly
+
+```bash
+mkdir -p V:/myproject/{sources,sandbox,results,documentation,dissemination,archive,links}
+```
+
 ### [Section 1: Setting up Software Environment](10-section1-intro.md)
 
 In the first section we are going to set up our working environment
@@ -85,7 +91,7 @@ software development in a typical collaborative code development cycle:
 - **Command line** for running code and interacting with the **command line tool Git** for
 - **Integrated Development Environment** for **code development, testing and debugging**,
   **Version control** and using code branches to develop new features in parallel,
-- **GitHub** (central and remote source code management platform supporting version control with Git)
+- **Algobank** (or any other central and remote source code management platform supporting version control with Git)
   for **code backup, sharing and collaborative development**, and
 - **Python code style guidelines** to make sure our code is
   **documented, readable and consistently formatted**.
@@ -97,7 +103,7 @@ in this section we learn:
 
 - how to set up a **test framework** and write tests to verify the behaviour of our code is correct, and
 - how to automate and scale testing with **Continuous Integration (CI)** using
-  **GitHub Actions** (a CI service available on GitHub).
+  **GitLab Actions** (a CI service available on the Algobank).
 
 ### [Section 3: Software Development as a Process](30-section3-intro.md)
 
@@ -193,7 +199,7 @@ All exercises contain solutions but, wherever possible, try and work out a solut
 ## Outdated Screenshots
 
 Throughout this lesson we will make use and show content
-from Graphical User Interface (GUI) tools such as Integrated Development Environments (IDEs) and GitHub.
+from Graphical User Interface (GUI) tools such as Visual Studio Code and the Algobank
 These are evolving tools and platforms, always adding new features and new visual elements.
 Screenshots in the lesson may then become out-of-sync,
 refer to or show content that no longer exists or is different to what you see on your machine.
